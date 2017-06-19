@@ -17,11 +17,8 @@
         <link rel="stylesheet" href="{% static 'home/css/style.css'%}">
     </head>
     <body>
-        <div id="wrap">
-            <div id="main" class="container clear-top">
                 {% block body %}
                 {% endblock %}
-            </div>
         </div>
         {% block footer %}
             {% include 'home/footer.html'%}

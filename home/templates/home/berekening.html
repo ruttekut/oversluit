@@ -2,153 +2,58 @@
 {% block title %}Berekenen {% endblock %}
 {% block body %}
     {% include 'home/nav.html'%}
-
-<div class="col-md-12">
-    <div class="container">
-        <form class="well form-horizontal" action=" " method="post"  id="contact_form">
-            <fieldset>
-            <!-- Form Name -->
-            <legend>Maak hier uw berekening</legend>
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label">First Name</label>
-                <div class="col-md-4 inputGroupContainer">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
-                    </div>
-                </div>
-            </div>
-
-    <!-- Text input-->
-
-    <div class="form-group">
-        <label class="col-md-4 control-label" >Last Name</label>
-        <div class="col-md-4 inputGroupContainer">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+<div class="container calc-form">
+    <form>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
             </div>
         </div>
-    </div>
-
-        <!-- Text input-->
-        <div class="form-group">
-    <label class="col-md-4 control-label">E-Mail</label>
-<div class="col-md-4 inputGroupContainer">
-<div class="input-group">
-<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-<input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
-</div>
-</div>
-</div>
-
-
-        <!-- Text input-->
-
-        <div class="form-group">
-          <label class="col-md-4 control-label">Phone #</label>
-            <div class="col-md-4 inputGroupContainer">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-          <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
-            </div>
-          </div>
-        </div>
-
-        <!-- Text input-->
-
-        <div class="form-group">
-          <label class="col-md-4 control-label">Address</label>
-            <div class="col-md-4 inputGroupContainer">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-          <input name="address" placeholder="Address" class="form-control" type="text">
-            </div>
-          </div>
-        </div>
-
-        <!-- Text input-->
-
-        <div class="form-group">
-          <label class="col-md-4 control-label">City</label>
-            <div class="col-md-4 inputGroupContainer">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-          <input name="city" placeholder="city" class="form-control"  type="text">
-            </div>
-          </div>
-        </div>
-
-        <!-- Select Basic -->
-
-        <!-- Text input-->
-
-        <div class="form-group">
-          <label class="col-md-4 control-label">Zip Code</label>
-            <div class="col-md-4 inputGroupContainer">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-          <input name="zip" placeholder="Zip Code" class="form-control"  type="text">
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
             </div>
         </div>
-        </div>
-
-        <!-- Text input-->
-        <div class="form-group">
-          <label class="col-md-4 control-label">Website or domain name</label>
-           <div class="col-md-4 inputGroupContainer">
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
-          <input name="website" placeholder="Website or domain name" class="form-control" type="text">
+        <fieldset class="form-group row">
+        <legend class="col-form-legend col-sm-2">Radios</legend>
+        <div class="col-sm-10">
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                    Option one is this and that&mdash;be sure to include why it's great
+                </label>
             </div>
-          </div>
-        </div>
-
-        <!-- radio checks -->
-         <div class="form-group">
-                                <label class="col-md-4 control-label">Do you have hosting?</label>
-                                <div class="col-md-4">
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="hosting" value="yes" /> Yes
-                                        </label>
-                                    </div>
-                                    <div class="radio">
-                                        <label>
-                                            <input type="radio" name="hosting" value="no" /> No
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-
-        <!-- Text area -->
-
-        <div class="form-group">
-            <label class="col-md-4 control-label">Project Description</label>
-            <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-    	            <textarea class="form-control" name="comment" placeholder="Project Description"></textarea>
-                </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                    Option two can be something else and selecting it will deselect option one
+                </label>
+            </div>
+            <div class="form-check disabled">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+                    Option three is disabled
+                </label>
             </div>
         </div>
-
-        <!-- Success message -->
-        <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
-
-        <!-- Button -->
-        <div class="form-group">
-          <label class="col-md-4 control-label"></label>
-          <div class="col-md-4">
-            <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
-          </div>
-        </div>
-
         </fieldset>
-        </form>
+        <div class="form-group row">
+            <label class="col-sm-2">Checkbox</label>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Check me out
+                    </label>
+                </div>
+            </div>
         </div>
-    </div><!-- /.container -->
-    </div>
+        <div class="form-group row">
+            <div class="offset-sm-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+        </div>
+    </form>
 </div>
 {% endblock %}

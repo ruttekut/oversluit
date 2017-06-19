@@ -1,32 +1,17 @@
-html, body {
-  height: 100%;
-}
-
-#wrap {
-  min-height: 100%;
-}
-
-#main {
-  overflow:auto;
-  padding-bottom:150px; /* this needs to be bigger than footer height*/
-}
-
 .footer {
   position: relative;
   margin-top: 40px; /* negative value of footer height */
   clear:both;
   padding-top:20px;
 }
-
-
-
 /*
 The classe below belong to the home page
 */
 /* Banner */
 .banner {
+    border-top: 8px solid #DE1B1B;
     background-color: #2B2B2B;
-    height: 20em;
+    height: 23em;
 }
 
 .banner img {
@@ -43,16 +28,19 @@ The classe below belong to the home page
 /* HomePage TopBlocks */
 .topblock {
     margin-top: 5em;
+    background-color: #F0F0F0;
 }
 .homedivider {
     margin-top: 5em;
+}
+.homedivider img {
+    width: 100%
 }
 /* End of Homepage*/
 
 /* Navbar */
 .topnav {
     height: 6em;
-    border-bottom: 8px solid #DE1B1B;
     margin-bottom:0;
     font-size: 1.2em;
 }
@@ -69,4 +57,22 @@ The classe below belong to the home page
 
 .footer a {
     color: black;
+}
+
+/* Form */
+.calc-form {
+    margin-top: 10em;
+    padding-top: 5em;
+}
+
+/* Contactform*/
+.contactform {
+    padding-bottom: 3em;
+}
+.contactform input{
+    margin-top: 1em;
+}
+.contactform textarea {
+    margin-top: 1em;
+    width: 80%;
 }
