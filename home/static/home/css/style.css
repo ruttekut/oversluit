@@ -1,0 +1,72 @@
+html, body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow:auto;
+  padding-bottom:150px; /* this needs to be bigger than footer height*/
+}
+
+.footer {
+  position: relative;
+  margin-top: 40px; /* negative value of footer height */
+  clear:both;
+  padding-top:20px;
+}
+
+
+
+/*
+The classe below belong to the home page
+*/
+/* Banner */
+.banner {
+    background-color: #2B2B2B;
+    height: 20em;
+}
+
+.banner img {
+    margin-top: 3em;
+}
+
+.banner p {
+    font-family: 'Pangolin', cursive;
+    font-size: 1.2em;
+    color:white;
+    margin-top: 3em;
+}
+
+/* HomePage TopBlocks */
+.topblock {
+    margin-top: 5em;
+}
+.homedivider {
+    margin-top: 5em;
+}
+/* End of Homepage*/
+
+/* Navbar */
+.topnav {
+    height: 6em;
+    border-bottom: 8px solid #DE1B1B;
+    margin-bottom:0;
+    font-size: 1.2em;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #f5f5f5;
+}
+
+.footerRow {
+    margin-top: 1.5em;
+    border-bottom: 1px solid white;
+}
+
+.footer a {
+    color: black;
+}

@@ -1,4 +1,67 @@
 {% extends 'home/base.html' %}
 {% block body %}
-    {% include 'home/nav.html'%}
+{% load staticfiles%}
+{% include 'home/nav.html'%}
+<div class="container-fluid banner">
+    <div class="row">
+        <div class="col-lg-4 col-lg-offset-2">
+            <img class="img-responsive"src="{% static 'img/banner.jpeg'%}" alt="">
+        </div>
+        <div class="col-lg-4 col-lg-offset-1">
+            <p>
+                "Ik wist net zoals veel mensen niet dat het oversluiten van een hypotheek zo voordelig kan zijn.
+                Blijkbaar ben ik niet goed geadviseerd toen ik mijn eerste hypothek afsloot.. Gelukkig kan je
+                makkelijk online advies aanvragen en is het eerste gesprek altijd kosteloos!
+                "
+            </p>
+        </div>
+    </div>
+</div>
+<div class="topblock">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h2>De voordelen van oversluiten</h2>
+                <p>
+                    Als je jouw hypotheek wilt oversluiten, krijg je te maken met voor- en nadelen.
+                    De voordelen zijn eigenlijk vrij duidelijk: je krijgt een lagere rente en dus lagere maandlasten.
+                    En je krijgt een nieuwe rentevaste periode.
+                    Dit betekent de zekerheid dat je maandlasten gedurende die periode hetzelfde blijven.
+                    Dat zijn duidelijke voordelen.
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Wat is een online berekening</h2>
+                <p>
+                    Bereken direct of je voor de beoogde koopwoning in aanmerking komt voor een renteloze Starterslening, en zo ja wat de hoogte is van de renteloze lening. Je ontvangt direct na het versturen de uitslag van deze berekening per e-mail.
+
+                    Je ontvangt dan de navolgende informatie over de Starterslening:
+
+                    Doet de gemeente waar je een koopwoning op het oog heeft mee met de startersregeling?
+                    Voldoe ik aan de voorwaarden om een starterslening te krijgen?
+                    Hoeveel kan ik maximaal renteloos lenen?
+                    Wat worden dan mijn maandlasten inclusief de starterslening?
+                    Hoe kan ik de starterslening aanvragen?
+                    Het is mogelijk dat er contact met u wordt opgenomen om de volledigheid van de berekening te controleren.
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Kan het voor mij ook goedkoper?</h2>
+                <p>
+                    Over 14 jaar is het zover: de hypotheekrenteaftrek voor leningen die in 2001 al liepen komt te vervallen. Deze 30-jaartermijn geldt voor veel aflossingsvrije hypotheken. De Autoriteit Financiële Markten (AFM) … lees meer
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="homedivider">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="img-responsive" src="{% static 'img/panoramadivider.jpg'%}" alt="">
+            </div>
+            <img src="" alt="">
+        </div>
+    </div>
+</div>
 {% endblock %}

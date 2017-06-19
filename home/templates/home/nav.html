@@ -1,29 +1,29 @@
-{% block nav %}
 {% load staticfiles %}
-
-<div class="container-fluid top">
-    <div class="row">
-        <div class="col-md-4 col-md-offset-2">
-            <p><h3>Kom niet voor verassing te staan</h3></p>
-            <h4>Vraag direct een adviesgesprek aan!</h4>
-            <button type="button" class="btn btn-success">Gratis adviesgesprek</button>
-        </div>
-        <div class="col-md-2 col-md-offset-4">
-            <p class="contactus"><b>Meer weten? bel: 08810294848</b></p>
+{% block nav %}
+    <div class="navbar navbar-default navbar-static-top topnav">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home:index'%}">Oversluiten</a>
+            <button class="navbar-toggle" data-toggle='collapse' data-target='.navHeaderCollapse'>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse navHeaderCollapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="{% url 'home:index'%}">Home</a></li>
+                    <li><a href="{% url 'home:calculation' %}">Bereken</a></li>
+                    <li><a href="#">Wie zijn wij</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle='dropdown'>Hypotheken <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Oversluiten</a></li>
+                            <li><a href="#">Ik ben nieuw</a></li>
+                            <li><a href="#">Handige tips</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{% url 'home:contact'%}">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
-
-
-<nav class="navbar navbar-default">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="#">Tips bij het kopen</a></li>
-            <li role="presentation"><a href="#">Maak een berekening</a></li>
-            <li role="presentation"><a href="#">Wie zijn wij?</a></li>
-            <li role="presentation"><a href="#">Contact</a></li>
-        </ul>
-</nav>
 {% endblock %}
