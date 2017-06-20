@@ -11,7 +11,7 @@
             <div class="collapse navbar-collapse navHeaderCollapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="{% if nbar == 'home' %}active{% endif %}"><a href="{% url 'home:index'%}">Home</a></li>
-                    <li class="{% if nbar == 'bereken' %}active{% endif %}"><a href="{% url 'home:calculation'%}">Bereken</a></li>
+                    <li class="{% if nbar == 'bereken' %}active{% endif %}"><a href="{% url 'home:createlead'%}">Bereken</a></li>
                     <li class="{% if nbar == 'wiezijnwij' %}active{% endif %}"><a href="#">Wie zijn wij</a></li>
                     <li class="dropdown {% if nbar == 'hypotheken' %}active{% endif %}">
                         <a href="#" class="dropdown-toggle" data-toggle='dropdown'>Hypotheken <b class="caret"></b></a>
@@ -30,10 +30,10 @@
     </div>
     <div class="container-fluid banner">
         <div class="row">
-            <div class="col-lg-3 col-lg-offset-2">
+            <div class="col-md-3 col-lg-offset-2">
                 <img class="img-responsive"src="{% static 'img/banner.jpeg'%}" alt="">
             </div>
-            <div class="col-lg-3 col-lg-offset-1">
+            <div class="col-md-3 col-lg-offset-1">
                 <p>
                     "Ik wist niet zoals veel mensen niet dat het oversluiten van een hypotheek zo voordelig kan zijn.
                     Blijkbaar ben ik niet goed geadviseerd toen ik mijn eerste hypothek afsloot.. Gelukkig kan je
