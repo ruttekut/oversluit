@@ -99,12 +99,3 @@ The classe below belong to the home page
 }
 
 /*Berekeningform*/
-.btn {
-    float: right;
-}
-.berekenform {
-    padding:3em;
-    margin-top: 3em;
-    color: white;
-    background-color: #3399ff;
-}
