@@ -1,16 +1,20 @@
 {% extends 'home/base.html' %}
 {% load staticfiles%}
 {% load crispy_forms_tags %}
+{% block title %}Maak een berekening {% endblock %}
+
+
 {% block body %}
 {% include 'home/nav.html'%}
 <div class="container">
-    <div class="row">
-        <div class="col-xs-4 col-xs-offset-2 ">
-        <form class="form group" action="{% url 'home:createlead'%}" method="post">
-    {% csrf_token%}
-    {{ form|crispy }}
-    <button class="btn btn-succes" type="submit">Bereken</button>
-</form>
+    <div class="row berekenform">
+        <div class="col-xs-8 col-xs-offset-2 ">
+        <h2>Maak hier uw berekening</h2>
+        <form class="form group " action="{% url 'home:createlead'%}" method="post">
+            {% csrf_token%}
+            {{ form|crispy }}
+            <button class="btn btn-success" type="submit">Bereken</button>
+        </form>
     </div>
 </div>
 {% endblock %}

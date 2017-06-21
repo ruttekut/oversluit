@@ -9,10 +9,6 @@ def index(request):
     return render(request, 'home/home.html',  {'nbar': 'home'})
 
 
-def calculation(request):
-    return render(request, 'home/berekening.html', {'nbar': 'bereken'})
-
-
 def contact(request):
     return render(request, 'home/contact.html', {'nbar': 'contact'})
 
@@ -26,4 +22,5 @@ def createlead(request):
     else:
         form = Berekening()
 
-    return render(request, 'home/berekening.html', {'form': form})
+    return render(request, 'home/berekening.html', {'form': form},
+                  {'nbar': 'bereken'})
