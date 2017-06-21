@@ -5,5 +5,5 @@ app_name = 'home'
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^contact/$', views.contact, name='contact'),
-    url(r'^berekening/$', views.CreateLead.as_view(), name='createlead'),
+    url(r'^berekening/$', views.createlead, name='createlead'),
 ]

@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from django.shortcuts import render
-from django.views.generic.edit import CreateView
-from .models import Leads
-from django.core.urlresolvers import reverse
+from django.shortcuts import render, redirect
+from .forms import Berekening
 
 
 # Create your views here.
@@ -19,24 +17,13 @@ def contact(request):
     return render(request, 'home/contact.html', {'nbar': 'contact'})
 
 
-class CreateLead(CreateView):
-    """
-    Class based view for submitting the calculation form.
-    """
-    model = Leads
-    template_name = 'home/leads_form.html'
-    fields = [
-        'first_name',
-        'last_name',
-        'adress',
-        'homeNumber',
-        'zipcode',
-        'income',
-        'income_partner',
-        'email',
-        'phone',
-        'bkr'
-    ]
+def createlead(request):
+    if request.method == 'POST':
+        form = Berekening(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home/berekeninggemaakt.html')
+    else:
+        form = Berekening()
 
-    def get_success_url(self):
-        return reverse('home:index')
+    return render(request, 'home/berekening.html', {'form': form})

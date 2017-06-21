@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.db import models
+from datetime import datetime
 
 
 # Create your models here.
@@ -13,14 +14,14 @@ class Leads(models.Model):
     first_name = models.CharField(max_length=40)
     last_name = models.CharField(max_length=40)
     adress = models.CharField(max_length=250)
-    homeNumber = models.IntegerField()
+    home_number = models.CharField(max_length=8, null=True)
     zipcode = models.CharField(max_length=8)
     income = models.IntegerField()
-    income_partner = models.IntegerField()
+    income_partner = models.IntegerField(blank=True)
     email = models.EmailField()
     phone = models.IntegerField()
     bkr = models.CharField(max_length=8, choices=BKR)
-    calculationDate = models.DateField(null=True)
+    calculationDate = models.DateTimeField(default=datetime.now, blank=True)
 
     class Meta:
         verbose_name_plural = "leads"
